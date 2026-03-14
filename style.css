@@ -65,6 +65,7 @@ h1, h2, h3 {
   color: var(--accent-color);
   background: linear-gradient(90deg, var(--accent-color), var(--accent-secondary));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
