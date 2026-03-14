@@ -184,16 +184,114 @@ nav {
   box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
 }
 
-/* Animations */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+.shimmer-text {
+  background: linear-gradient(90deg, 
+    var(--accent-color) 0%, 
+    var(--accent-soft) 25%, 
+    var(--accent-color) 50%, 
+    var(--accent-soft) 75%, 
+    var(--accent-color) 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 5s linear infinite;
+}
+
+/* Strategic Pillars */
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.pillar-item {
+  text-align: center;
+  padding: 2rem;
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.5s ease;
+}
+
+.pillar-item:hover {
+  border-bottom-color: var(--accent-color);
+  transform: translateY(-5px);
+}
+
+.pillar-item h4 {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+.pillar-item p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Consulting Cards */
+.consulting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.service-card {
+  padding: 3rem;
+  border: 1px solid var(--glass-border);
+  position: relative;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background: var(--accent-color);
+  transition: height 0.4s ease;
+}
+
+.service-card:hover::before {
+  height: 100%;
+}
+
+.service-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-card li {
+  color: var(--text-secondary);
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-card li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+@media (max-width: 900px) {
+  .pillars-grid { grid-template-columns: 1fr; gap: 1.5rem; }
 }
 
 @media (max-width: 768px) {
