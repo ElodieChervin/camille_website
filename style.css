@@ -1,29 +1,27 @@
 :root {
-  --bg-color: #0c0c0e;
-  --accent-color: #00e5ff;
-  --accent-secondary: #ff00c8;
-  --text-primary: #ffffff;
-  --text-secondary: #a0a0ab;
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-serif: 'Playfair Display', serif;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --bg-color: #0f0f0f; /* Deep, elegant charcoal */
+  --accent-color: #c5a059; /* Sophisticated champagne gold */
+  --accent-soft: #d9c18a;
+  --text-primary: #f8f8f8;
+  --text-secondary: #a0a0a0;
+  --glass-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(197, 160, 89, 0.2); /* Gold-tinted border */
+  --font-main: 'Inter', -apple-system, sans-serif;
+  --font-serif: 'Cormorant Garamond', serif;
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: var(--font-main);
-  line-height: 1.6;
-  overflow-x: hidden;
-  -webkit-font-smoothing: antialiased;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(197, 160, 89, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(197, 160, 89, 0.03) 0%, transparent 50%);
+  background-attachment: fixed;
 }
+
+.blob-1 { top: -10%; left: -10%; background: var(--accent-color); opacity: 0.1; }
+.blob-2 { bottom: -10%; right: -10%; background: #ffffff; opacity: 0.05; }
 
 /* Background effects */
 .bg-blobs {
@@ -149,32 +147,41 @@ nav {
 }
 
 .hero h1 {
-  font-size: 5rem;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
+  font-size: 5.5rem;
+  line-height: 1.05;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-style: italic;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-secondary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   max-width: 600px;
+  letter-spacing: 0.03em;
 }
 
 .btn-primary {
   display: inline-block;
-  padding: 1rem 2.5rem;
-  background: var(--accent-color);
-  color: var(--bg-color);
+  padding: 1.2rem 3rem;
+  background: transparent;
+  color: var(--accent-color);
   text-decoration: none;
-  border-radius: 100px;
+  border: 1px solid var(--accent-color);
+  border-radius: 0; /* Sharp, luxury look */
   font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  transition: all 0.4s ease;
 }
 
 .btn-primary:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
+  background: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(197, 160, 89, 0.2);
 }
 
 /* Animations */
