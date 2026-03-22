@@ -3,160 +3,694 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camille Robuchon | Senior Marketing Manager Portfolio</title>
+    <title>Camille Robuchon | Marketing Manager & Brand Strategist</title>
+    <meta name="description" content="Senior Marketing Manager with 7+ years building brands from scratch. Specializing in brand strategy, digital ecosystems, and turning complex products into stories that spread.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-    </div>
+    <!-- Custom cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursor-dot"></div>
 
-    <nav>
-        <div class="container nav-content">
-            <div class="logo">CR<span class="accent-text">.</span></div>
-            <div class="nav-links">
-                <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
-                <a href="#consulting">Consulting</a>
-                <a href="#contact">Contact</a>
-            </div>
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">CR<span class="dot">.</span></a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#aspirations">Aspirations</a></li>
+                <li><a href="#contact" class="nav-cta magnetic">Contact</a></li>
+            </ul>
         </div>
     </nav>
 
-    <main>
-        <section class="hero container">
-            <div class="hero-content reveal">
-                <h1 id="hero-title" class="shimmer-text">Architecting <span class="accent-text">Luxury Branding</span> Through Strategic Innovation.</h1>
-                <p>Translating the intangible essence of premium brands into market leadership. 7+ years of international prestige marketing.</p>
-                <div style="display: flex; gap: 1.5rem;">
-                    <a href="#contact" class="btn-primary">Portfolio</a>
-                    <a href="#consulting" class="btn-primary" style="background: var(--accent-color); color: var(--bg-color);">Consultancy</a>
-                </div>
+    <!-- Hero -->
+    <section id="hero">
+        <div class="hero-background" id="hero-bg">
+            <img src="images/escentina-magazine-feature.jpeg" alt="" class="hero-bg-img" id="parallax-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-noise"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-tag reveal-up">Marketing Manager · Brand Strategist · Zurich</div>
+            <h1 class="reveal-up">
+                Making complex ideas<br>
+                <em>impossible to ignore.</em>
+            </h1>
+            <p class="hero-sub reveal-up">
+                7+ years building brands from scratch — shaping identities, driving digital growth,
+                and turning science-backed products into stories that resonate.
+            </p>
+            <div class="hero-actions reveal-up">
+                <a href="#portfolio" class="btn-primary magnetic">View Work</a>
+                <a href="#contact" class="btn-ghost">Get in Touch</a>
             </div>
-            
-            <div class="pillars-grid reveal">
-                <div class="pillar-item">
-                    <h4>Brand Architect</h4>
-                    <p>Structural Identity & Resonance</p>
-                </div>
-                <div class="pillar-item">
-                    <h4>Market Alchemist</h4>
-                    <p>Global Expansion & Strategy</p>
-                </div>
-                <div class="pillar-item">
-                    <h4>Digital Visionary</h4>
-                    <p>Next-Gen Consumer Engagement</p>
-                </div>
-            </div>
-        </section>
 
-        <section id="experience" class="container">
-            <div class="reveal">
-                <h2 style="font-size: 3rem; margin-bottom: 3rem;">Strategic <span class="accent-text">Impact</span></h2>
-                <div class="timeline">
-                    <div class="glass-card" style="margin-bottom: 2rem;">
-                        <h3 style="margin-bottom: 0.5rem; color: var(--accent-color);">Senior Marketing Manager | ESCENTINA</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Jan 2025 — Present • Winterthur, Switzerland</p>
-                        <ul style="list-style: none; color: var(--text-secondary);">
-                            <li style="margin-bottom: 0.8rem;">→ Leading 5-year global strategy and 5+ market expansions.</li>
-                            <li style="margin-bottom: 0.8rem;">→ Directing cross-functional teams of 8 across R&D and Sales.</li>
-                            <li style="margin-bottom: 0.8rem;">→ Orchestrating multi-channel digital and print content creation.</li>
+            <div class="hero-stats reveal-up">
+                <div class="stat">
+                    <span class="stat-num" data-count="7">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label">Markets Launched</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num" data-count="4">0</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-portrait-wrap reveal-up">
+            <div class="hero-portrait">
+                <img src="images/camille-headshot-professional.jpeg" alt="Camille Robuchon">
+                <div class="portrait-ring portrait-ring-1"></div>
+                <div class="portrait-ring portrait-ring-2"></div>
+            </div>
+        </div>
+        <a href="#portfolio" class="scroll-hint" aria-label="Scroll down">
+            <div class="scroll-text">Scroll</div>
+            <div class="scroll-line"></div>
+        </a>
+    </section>
+
+    <!-- Marquee strip -->
+    <div class="marquee-strip" aria-hidden="true">
+        <div class="marquee-track" id="marquee-track">
+            <span>Brand Strategy</span><span class="mq-dot">·</span>
+            <span>B2B Marketing</span><span class="mq-dot">·</span>
+            <span>Go-to-Market</span><span class="mq-dot">·</span>
+            <span>Digital Ecosystems</span><span class="mq-dot">·</span>
+            <span>Content &amp; Storytelling</span><span class="mq-dot">·</span>
+            <span>Product Launches</span><span class="mq-dot">·</span>
+            <span>SEO / CRM</span><span class="mq-dot">·</span>
+            <span>Agency Management</span><span class="mq-dot">·</span>
+            <span>In-Cosmetics Global 2026</span><span class="mq-dot">·</span>
+            <span>NEZ Publication</span><span class="mq-dot">·</span>
+            <span>4 Languages</span><span class="mq-dot">·</span>
+            <span>5+ Markets</span><span class="mq-dot">·</span>
+            <span>Adobe Suite</span><span class="mq-dot">·</span>
+            <span>Figma · Salesforce · AI Tools</span><span class="mq-dot">·</span>
+            <span>Brand Strategy</span><span class="mq-dot">·</span>
+            <span>B2B Marketing</span><span class="mq-dot">·</span>
+            <span>Go-to-Market</span><span class="mq-dot">·</span>
+            <span>Digital Ecosystems</span><span class="mq-dot">·</span>
+            <span>Content &amp; Storytelling</span><span class="mq-dot">·</span>
+            <span>Product Launches</span><span class="mq-dot">·</span>
+            <span>SEO / CRM</span><span class="mq-dot">·</span>
+            <span>Agency Management</span><span class="mq-dot">·</span>
+            <span>In-Cosmetics Global 2026</span><span class="mq-dot">·</span>
+            <span>NEZ Publication</span><span class="mq-dot">·</span>
+            <span>4 Languages</span><span class="mq-dot">·</span>
+            <span>5+ Markets</span><span class="mq-dot">·</span>
+        </div>
+    </div>
+    <!-- Experience -->
+    <section id="experience">
+        <div class="container">
+            <div class="exp-header-row reveal-up">
+                <div>
+                    <span class="section-tag">Background</span>
+                    <h2 class="exp-h2">7 years. <em>4 companies. 5+ markets.</em></h2>
+                </div>
+                <a href="mailto:camille.robuchon@outlook.com?subject=CV Request" class="exp-cv-link">
+                    Request full CV →
+                </a>
+            </div>
+
+            <!-- Main role — Escentina -->
+            <div class="timeline">
+                <div class="timeline-track"></div>
+                <div class="timeline-item reveal-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-top">
+                            <div>
+                                <div class="timeline-meta">
+                                    <span class="timeline-date">Jan 2022 — Present</span>
+                                    <span class="timeline-sep">·</span>
+                                    <span class="timeline-location">Winterthur, Switzerland</span>
+                                </div>
+                                <div class="timeline-role">Senior Marketing Manager</div>
+                                <div class="timeline-company">Escentina · Natural Fragrance House</div>
+                            </div>
+                            <div class="timeline-badge">Current</div>
+                        </div>
+                        <ul class="timeline-list">
+                            <li>Built the entire marketing function from scratch — brand identity, strategy, and digital ecosystem</li>
+                            <li>Led full rebranding: company rename, global trademark registration across 40+ countries, new positioning and visual identity</li>
+                            <li>Directed B2B website architecture (UX, content, structure) and coordinated technical delivery</li>
+                            <li>Manages 4 annual product launches across B2B natural fragrance markets</li>
+                            <li>Oversees digital channels: SEO, social media, CRM — growing organic visibility significantly</li>
+                            <li>Led international expansion across 5+ markets; cross-functional team of 8</li>
+                            <li>Published in <em>The Big Book of Perfume</em> (NEZ) · Featured at In-Cosmetics Global 2026, Paris</li>
                         </ul>
-                    </div>
-
-                    <div class="glass-card" style="margin-bottom: 2rem;">
-                        <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">Global Brand Development | LA PRAIRIE</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">2019 — 2020 • Zurich, Switzerland</p>
-                        <p style="color: var(--text-secondary);">Managed 360° assets for 2 global launches, ensuring creative alignment and market adaptation for US and China.</p>
-                    </div>
-
-                    <div class="glass-card" style="margin-bottom: 2rem;">
-                        <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">International Marketing | L'OCCITANE</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">2018 — 2018 • Geneva, Switzerland</p>
-                        <p style="color: var(--text-secondary);">Coordinated premium line launch in partnership with Pierre Hermé, focusing on local market toolkits and innovation.</p>
+                        <div class="timeline-chips">
+                            <span class="chip">Brand Strategy</span>
+                            <span class="chip">B2B Marketing</span>
+                            <span class="chip">GTM</span>
+                            <span class="chip">SEO / CRM</span>
+                            <span class="chip">Social</span>
+                            <span class="chip">Agency Management</span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <section id="projects" class="container">
-            <div class="reveal">
-                <h2 style="font-size: 3rem; margin-bottom: 3rem;">Creative <span class="accent-text">Showcase</span></h2>
-                <div class="project-grid">
-                    <div class="glass-card project-card">
-                        <div class="project-tag">Branding</div>
-                        <h3>Global Rebranding</h3>
-                        <p>Orchestrated a total visual identity shift for Escentina, harmonizing prestige Heritage with modern digital resonance.</p>
+            <!-- Previous roles — compact row -->
+            <div class="prev-roles reveal-up">
+                <div class="prev-role-label">Previously</div>
+                <div class="prev-role-list">
+                    <div class="prev-role">
+                        <div class="prev-role-co">L'Occitane Group</div>
+                        <div class="prev-role-title">International Marketing Coordinator</div>
+                        <div class="prev-role-date">2018 – 2019 · Geneva</div>
                     </div>
-                    <div class="glass-card project-card">
-                        <div class="project-tag">Digital</div>
-                        <h3>D2C Launch</h3>
-                        <p>Directed the end-to-end architecture of a new high-conversion ecommerce platform for luxury skincare.</p>
+                    <div class="prev-role-sep"></div>
+                    <div class="prev-role">
+                        <div class="prev-role-co">La Prairie Group</div>
+                        <div class="prev-role-title">Global Brand Executive</div>
+                        <div class="prev-role-date">2019 – 2020 · Zurich</div>
                     </div>
-                    <div class="glass-card project-card">
-                        <div class="project-tag">Social</div>
-                        <h3>Organic Growth</h3>
-                        <p>Scaled brand social presence from zero to a highly-engaged community of luxury enthusiasts through elite storytelling.</p>
+                    <div class="prev-role-sep"></div>
+                    <div class="prev-role">
+                        <div class="prev-role-co">Smart Media Agency</div>
+                        <div class="prev-role-title">Marketing &amp; Sales Project Manager</div>
+                        <div class="prev-role-date">2020 – 2021 · Zurich</div>
+                    </div>
+                    <div class="prev-role-sep"></div>
+                    <div class="prev-role">
+                        <div class="prev-role-co">Education</div>
+                        <div class="prev-role-title">MSc International Business · SKEMA (FR/USA/CN)</div>
+                        <div class="prev-role-date">2015 – 2017</div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="consulting" class="container">
-            <div class="reveal">
-                <h2 style="font-size: 3rem; margin-bottom: 3rem;">Global <span class="accent-text">Consultancy</span></h2>
-                <p style="color: var(--text-secondary); max-width: 700px; margin-bottom: 4rem; font-size: 1.1rem;">
-                    Bespoke strategic interventions for luxury, premium cosmetics, and fragrance houses. Available for selective freelance contracts and high-impact consulting projects.
-                </p>
-                
-                <div class="consulting-grid">
-                    <div class="service-card glass-card">
-                        <h3>Go-To-Market Strategy</h3>
-                        <ul>
-                            <li>New Market Entry (US, China, EMEA)</li>
-                            <li>Product Launch Architecture</li>
-                            <li>Pricing & Distribution Positioning</li>
-                        </ul>
-                    </div>
-                    <div class="service-card glass-card">
-                        <h3>Brand Transformation</h3>
-                        <ul>
-                            <li>Identity & Visual Storytelling</li>
-                            <li>Brand Voice & Content Strategy</li>
-                            <li>Prestige Repositioning</li>
-                        </ul>
-                    </div>
-                    <div class="service-card glass-card">
-                        <h3>Growth & Digital</h3>
-                        <ul>
-                            <li>D2C Platform Scaling</li>
-                            <li>Luxury CRM & Loyalty Systems</li>
-                            <li>Social Influence & Media Planning</li>
-                        </ul>
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <span class="section-tag">Work</span>
+                <h2>Creative <em>Portfolio</em></h2>
+                <p class="section-desc">Brand, content, and digital work built at Escentina. Click any piece to learn more.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="portfolio-filters reveal-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="brand">Brand &amp; Identity</button>
+                <button class="filter-btn" data-filter="content">Content &amp; Social</button>
+                <button class="filter-btn" data-filter="product">Product Campaigns</button>
+                <button class="filter-btn" data-filter="press">Press &amp; Events</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolio-grid">
+
+                <!-- Item 1 -->
+                <div class="pf-item reveal-up" data-cat="press" data-index="0"
+                     data-title="Featured in The Big Book of Perfume"
+                     data-tag="Press · Editorial · NEZ Publication"
+                     data-desc="Secured Escentina's inclusion in the prestigious NEZ publication — bringing the brand into expert editorial discourse and raising its international profile. This placement required crafting the brand's technical and scientific narrative in a way that resonated with fragrance experts and connoisseurs worldwide. A key milestone in establishing Escentina as a thought-leader in natural perfumery.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-big-book-perfume.jpeg" alt="The Big Book of Perfume">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Press · Editorial</div>
+                                <div class="pf-hover-title">The Big Book of Perfume</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div style="margin-top: 5rem; text-align: center;">
-                    <a href="mailto:camille.robuchon@outlook.com?subject=Consulting Inquiry" class="btn-primary" style="padding: 1.5rem 4rem;">Secure a Consultation</a>
+
+                <!-- Item 2 -->
+                <div class="pf-item pf-wide reveal-up" data-cat="brand" data-index="1"
+                     data-title="Escentina Brand Relaunch"
+                     data-tag="Brand Identity · Rebranding · Visual System"
+                     data-desc="Led the complete rebranding of the company — from renaming and global trademark registration to a new visual identity, positioning, and tone of voice. Built from zero: no brief, no template, no consultant. Translated a Swiss fragrance house's 75-year heritage into a modern, internationally legible brand ready for B2B expansion across Europe and beyond.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-magazine-feature.jpeg" alt="Escentina brand relaunch">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Brand Identity</div>
+                                <div class="pf-hover-title">Escentina Brand Relaunch</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="pf-item reveal-up" data-cat="product" data-index="2"
+                     data-title="Fine Collection Product Campaign"
+                     data-tag="Product Launch · Campaign · B2B"
+                     data-desc="Directed the launch campaign for the Escentina Fine Collection — a curated range of 8 premium natural fragrances. From briefing photographers to defining the visual direction, managing the content calendar, and producing assets across digital and print channels. Each product required a distinct ingredient story to support B2B sales conversations with perfumers and cosmetics manufacturers.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-fine-collection-lineup.jpeg" alt="Fine Collection lineup">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Product Campaign</div>
+                                <div class="pf-hover-title">Fine Collection</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="pf-item reveal-up" data-cat="content" data-index="3"
+                     data-title="Ingredient Storytelling — Coffee Series"
+                     data-tag="Social Media · Content Creation · Storytelling"
+                     data-desc="Developed a multi-part social series spotlighting raw ingredients behind Escentina's fragrances. Each post pairs a product with its key ingredient in a flat-lay format, making complex olfactory science visually accessible. This format became Escentina's most-shared content type, generating significant organic engagement from both industry professionals and end consumers.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-coffee-ingredient.jpeg" alt="Coffee ingredient content">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Social Media</div>
+                                <div class="pf-hover-title">Ingredient Storytelling</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="pf-item reveal-up" data-cat="content" data-index="4"
+                     data-title="Ingredient Storytelling — Apricot & Stone Fruit"
+                     data-tag="Social Media · Content Creation · Organic Growth"
+                     data-desc="Part of the ingredient storytelling series: the apricot/stone fruit shoot explored the solar, fruity character of Escentina's raw material palette. Shot and developed in-house to keep production agile and cost-efficient. Content was repurposed across Instagram, LinkedIn (B2B), and the product catalogue — demonstrating how a single creative concept can scale across channels.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-apricot-ingredient.jpeg" alt="Apricot ingredient flatlay">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Content Creation</div>
+                                <div class="pf-hover-title">Stone Fruit Series</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="pf-item pf-tall reveal-up" data-cat="content" data-index="5"
+                     data-title="Science Made Accessible — Allergen Infographic"
+                     data-tag="Educational Content · Infographic · B2B Communication"
+                     data-desc="Designed to demystify one of the fragrance industry's most complex regulatory debates. This infographic — built entirely in-house — translates IFRA allergen regulation into a visual decision framework for perfumers and cosmetics buyers. It became Escentina's top-performing content piece on LinkedIn, demonstrating that deep technical knowledge can be packaged to feel approachable, even bold.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-allergen-infographic.jpeg" alt="Allergen-free infographic">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Educational Content</div>
+                                <div class="pf-hover-title">Science Made Accessible</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="pf-item reveal-up" data-cat="brand" data-index="6"
+                     data-title="Fragrance Families Visual System"
+                     data-tag="Brand · Visual Identity · Product Architecture"
+                     data-desc="Created the visual taxonomy for Escentina's full product architecture — mapping 15 natural fragrance families into a consistent, branded display system. Each jar carries a unique color-coded label matching its olfactory family. This system was deployed across the website, trade fair materials, and product catalogues, giving the brand cohesion across every touchpoint.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-fragrance-jars.jpeg" alt="Fragrance families">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Visual System</div>
+                                <div class="pf-hover-title">Fragrance Families</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="pf-item reveal-up" data-cat="content" data-index="7"
+                     data-title="Provocative Social — Are Fragrances Dangerous?"
+                     data-tag="Social Strategy · Engagement · Thought Leadership"
+                     data-desc="Conceived and produced a series of provocative question-led posts designed to spark conversation and challenge assumptions. 'Are fragrances (really) dangerous?' was one of the highest-reach posts Escentina published — blending scientific accuracy with emotional tension. This approach reflected a clear understanding of what earns attention on social media: curiosity, controversy, and beauty.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-scent-question.jpeg" alt="Provocative social content">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Social Strategy</div>
+                                <div class="pf-hover-title">Provocative Content</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="pf-item reveal-up" data-cat="press" data-index="8"
+                     data-title="In-Cosmetics Global 2026 — Paris"
+                     data-tag="Events · PR · Trade Shows"
+                     data-desc="Developed all event communications for Escentina's debut at In-Cosmetics Global, Paris (April 2026) — the world's leading B2B beauty ingredients trade show. This included designing the booth concept, producing the invitation campaign, writing press materials, and coordinating with agency partners. Securing a stand at this event was itself a brand milestone, marking Escentina's arrival on the international ingredients stage.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-incosmetics-invite.jpeg" alt="In-Cosmetics Global 2026">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Events & PR</div>
+                                <div class="pf-hover-title">In-Cosmetics Global 2026</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 10 -->
+                <div class="pf-item reveal-up" data-cat="product" data-index="9"
+                     data-title="Lemon Juniper — Product Set Launch"
+                     data-tag="Product Launch · Art Direction · Campaign"
+                     data-desc="Art-directed the photoshoot and launch assets for the Lemon Juniper 01 product set — Escentina's flagship entry into the retail gifting market. The visual direction paired clean Nordic-inspired naturalism with the brand's premium positioning. Assets were distributed across e-commerce product pages, trade catalogues, and social channels, with performance tracked through CRM to inform future launches.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-lemon-juniper-set.jpeg" alt="Lemon Juniper set">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Product Launch</div>
+                                <div class="pf-hover-title">Lemon Juniper Set</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 11 -->
+                <div class="pf-item reveal-up" data-cat="brand" data-index="10"
+                     data-title="TrueScent — Product Line Communication"
+                     data-tag="Brand Communication · Print · Product Strategy"
+                     data-desc="Developed the naming strategy, brand language, and print communication assets for the TrueScent and SynScent product ranges — two sub-lines positioned around different perfumery philosophies. The brochure copy bridges complex botanical and molecular science with clean, confident brand voice, making Escentina's product strategy legible to both expert perfumers and cosmetics buyers unfamiliar with the category.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-truescent-brochure.jpeg" alt="TrueScent product brochure">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Brand Communication</div>
+                                <div class="pf-hover-title">TrueScent Range</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 12 -->
+                <div class="pf-item reveal-up" data-cat="content" data-index="11"
+                     data-title="Formula Development — Behind the Scenes"
+                     data-tag="Brand Culture · Behind-the-Scenes · Content"
+                     data-desc="Produced a 'behind the brief' content series showing the creative and scientific process behind Escentina's formula development. The notebook sketch format communicated craft, expertise, and human curiosity — values central to the brand. This series helped build a following among fragrance professionals and attracted inbound enquiries from perfumers and cosmetics manufacturers across Europe.">
+                    <div class="pf-img-wrap">
+                        <img src="images/escentina-scent-notebook.jpeg" alt="Fragrance development notebook">
+                        <div class="pf-hover-layer">
+                            <div class="pf-hover-content">
+                                <div class="pf-hover-tag">Brand Culture</div>
+                                <div class="pf-hover-title">Behind The Formula</div>
+                                <div class="pf-hover-cta">Click to explore →</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /portfolio-grid -->
+
+            <!-- How it started -->
+            <div class="case-study-banner reveal-up">
+                <div class="csb-left">
+                    <div class="csb-images">
+                        <img src="images/escentina-team-workshop.jpeg" alt="Team workshop">
+                        <img src="images/escentina-lab-research.jpeg" alt="Lab research">
+                    </div>
+                </div>
+                <div class="csb-right">
+                    <div class="csb-label">How It Started</div>
+                    <h3>Building a Marketing Function from Zero</h3>
+                    <p>When I joined Escentina, there was no brand identity, no protected company name, and no defined marketing function. Over 3 years, I built it all: trademark registration in 40+ countries, new brand identity, B2B digital ecosystem, social presence from scratch — within a CHF 100K budget. The result is a brand now internationally recognised, published in specialist media, and actively driving business development across 5+ markets.</p>
+                    <div class="csb-metrics">
+                        <div class="csb-metric">
+                            <div class="csb-num">CHF 100K</div>
+                            <div class="csb-label-s">Total Budget</div>
+                        </div>
+                        <div class="csb-metric">
+                            <div class="csb-num">5+</div>
+                            <div class="csb-label-s">Markets Launched</div>
+                        </div>
+                        <div class="csb-metric">
+                            <div class="csb-num">0→1</div>
+                            <div class="csb-label-s">Brand Function Built</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
 
-        <section id="contact" class="container" style="text-align: center;">
-            <div class="reveal">
-                <h2 style="font-size: 4rem; margin-bottom: 2rem;">Let's Define The <span class="accent-text">Future of Your Brand.</span></h2>
-                <p style="font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem;">Currently based in Zurich, open to global opportunities.</p>
-                <div style="display: flex; justify-content: center; gap: 2rem;">
-                    <a href="mailto:camille.robuchon@outlook.com" class="btn-primary">Email Me</a>
-                    <a href="tel:+41789770107" class="btn-primary" style="background: transparent; border: 1px solid var(--accent-color); color: var(--accent-color);">Call</a>
+        </div>
+    </section>
+
+    <!-- Aspirations -->
+    <section id="aspirations">
+        <div class="asp-bg">
+            <img src="images/escentina-lab-technician.jpeg" alt="" class="asp-bg-img">
+            <div class="asp-overlay"></div>
+        </div>
+        <div class="container">
+
+            <div class="asp-header reveal-up">
+                <span class="section-tag" style="color:var(--grey-green)">Aspirations</span>
+                <h2 style="color:var(--beige)">What I'm <em>building toward</em></h2>
+                <p class="asp-intro">I believe the most consequential marketing work today sits at the intersection of advanced technology and the physical world — where complex science needs to become a brand that people trust, follow, and buy into. That's the problem I want to spend the next decade solving.</p>
+            </div>
+
+            <!-- Tab navigation -->
+            <div class="asp-tabs reveal-up">
+                <button class="asp-tab active" data-tab="reading">Reading</button>
+                <button class="asp-tab" data-tab="thinking">Thinking About</button>
+                <button class="asp-tab" data-tab="following">Following</button>
+            </div>
+
+            <!-- Tab: Reading -->
+            <div class="asp-panel active" id="tab-reading">
+                <div class="asp-grid">
+
+                    <a href="https://www.aprildunford.com/obviously-awesome" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Book</div>
+                        <div class="asp-card-title">Obviously Awesome</div>
+                        <div class="asp-card-author">April Dunford</div>
+                        <p class="asp-card-note">The definitive playbook for positioning technology products. Directly shapes how I think about framing complex science — it's not about what you make, it's about the category you create.</p>
+                        <span class="asp-card-link">Read more ↗</span>
+                    </a>
+
+                    <a href="https://www.playbigger.com" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Book</div>
+                        <div class="asp-card-title">Play Bigger</div>
+                        <div class="asp-card-author">Lochhead, Peterson, Ramadan, Maney</div>
+                        <p class="asp-card-note">Category design as a marketing discipline. The argument: the best companies don't compete in categories, they create them. Directly relevant to any company defining a new field — physical AI included.</p>
+                        <span class="asp-card-link">Read more ↗</span>
+                    </a>
+
+                    <a href="https://www.marketingaiinstitute.com/blog/marketing-artificial-intelligence-book" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Book</div>
+                        <div class="asp-card-title">Marketing Artificial Intelligence</div>
+                        <div class="asp-card-author">Paul Roetzer &amp; Mike Kaput</div>
+                        <p class="asp-card-note">A grounded, practical framework for how AI is reshaping marketing operations — content, personalization, analytics. Essential reading for any marketer serious about the next decade.</p>
+                        <span class="asp-card-link">Read more ↗</span>
+                    </a>
+
+                    <a href="https://www.goodreads.com/book/show/26210508-alchemy" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Book</div>
+                        <div class="asp-card-title">Alchemy</div>
+                        <div class="asp-card-author">Rory Sutherland</div>
+                        <p class="asp-card-note">Why logic alone never sells anything — and why the irrational is the most powerful marketing lever. Required reading for anyone translating deep tech into mass appeal without dumbing it down.</p>
+                        <span class="asp-card-link">Read more ↗</span>
+                    </a>
+
+                    <a href="https://press.princeton.edu/books/hardcover/9780691182292/narrative-economics" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Book</div>
+                        <div class="asp-card-title">Narrative Economics</div>
+                        <div class="asp-card-author">Robert Shiller</div>
+                        <p class="asp-card-note">Stories are the mechanism through which ideas — and markets — spread. Shiller's framework for how narrative virality drives economic behaviour directly informs how I think about brand-building at scale.</p>
+                        <span class="asp-card-link">Read more ↗</span>
+                    </a>
+
+                    <a href="https://www.chip-heath.com/the-power-of-moments" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Book</div>
+                        <div class="asp-card-title">The Power of Moments</div>
+                        <div class="asp-card-author">Chip &amp; Dan Heath</div>
+                        <p class="asp-card-note">Brand experiences aren't built from averages — they're built from peaks. This shapes how I approach event strategy, onboarding, and any moment a company gets to make a first impression.</p>
+                        <span class="asp-card-link">Read more ↗</span>
+                    </a>
+
                 </div>
             </div>
-        </section>
-    </main>
+
+            <!-- Tab: Thinking About -->
+            <div class="asp-panel" id="tab-thinking">
+                <div class="asp-grid">
+
+                    <div class="asp-card asp-card-dark">
+                        <div class="asp-card-type">Concept</div>
+                        <div class="asp-card-title">Physical AI &amp; the Communication Gap</div>
+                        <p class="asp-card-note">Software-native AI (ChatGPT, Midjourney) markets itself through experience — you try it, it sells itself. Physical AI — weather models, robotics, industrial sensors — has no such shortcut. The product is invisible until it works. This makes brand and narrative more important, not less, and it's a problem I find genuinely fascinating.</p>
+                    </div>
+
+                    <div class="asp-card asp-card-dark">
+                        <div class="asp-card-type">Concept</div>
+                        <div class="asp-card-title">Category Design for Deep-Tech</div>
+                        <p class="asp-card-note">Most deep-tech companies try to win existing categories. The smarter move is to design a new one — own the vocabulary, the comparison set, the success metrics. At Escentina, I did this instinctively: we didn't position against fragrance houses, we created the 'natural B2B fragrance' category. I want to apply this at scale.</p>
+                    </div>
+
+                    <div class="asp-card asp-card-dark">
+                        <div class="asp-card-type">Concept</div>
+                        <div class="asp-card-title">AI-Native Content Operations</div>
+                        <p class="asp-card-note">The future of a lean marketing team isn't doing less — it's multiplying output through AI workflows. I'm actively building fluency in prompt engineering, AI-assisted design (Midjourney, Adobe Firefly), automated video (CapCut AI), and content repurposing pipelines — not as a curiosity but as a core operational capability.</p>
+                    </div>
+
+                    <div class="asp-card asp-card-dark">
+                        <div class="asp-card-type">Concept</div>
+                        <div class="asp-card-title">The First Marketing Hire Problem</div>
+                        <p class="asp-card-note">Joining a company as the first dedicated marketer is structurally different from any other role: no playbook, no brand guidelines, no approved audiences. You are simultaneously the strategist, the copywriter, the analyst, and the agency briefer. I've done this once. I want to do it again — at a company where the mission actually matters.</p>
+                    </div>
+
+                    <div class="asp-card asp-card-dark">
+                        <div class="asp-card-type">Concept</div>
+                        <div class="asp-card-title">B2B Thought Leadership That Actually Converts</div>
+                        <p class="asp-card-note">Most B2B content is either too technical to earn attention or too generic to earn trust. The sweet spot is content that demonstrates genuine expertise — the kind that makes a potential buyer think 'these people actually understand our problem', before any sales conversation begins. This is where I focused at Escentina; it's where I want to operate at scale.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Tab: Following -->
+            <div class="asp-panel" id="tab-following">
+                <div class="asp-grid">
+
+                    <a href="https://www.maicon.ai" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Conference</div>
+                        <div class="asp-card-title">Marketing AI Conference (MAICON)</div>
+                        <div class="asp-card-author">Cleveland, OH — July 2026</div>
+                        <p class="asp-card-note">The leading event at the intersection of AI and marketing practice. Where practitioners — not theorists — share what's actually working in content, campaign ops, and brand strategy with AI tools. On my radar for 2026.</p>
+                        <span class="asp-card-link">Explore ↗</span>
+                    </a>
+
+                    <a href="https://websummit.com" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Conference</div>
+                        <div class="asp-card-title">Web Summit</div>
+                        <div class="asp-card-author">Lisbon — November 2026</div>
+                        <p class="asp-card-note">Europe's largest tech conference. Where I track how the most ambitious startups position themselves to global press, investors, and customers simultaneously — in 3 days. Remarkable case study in compressed brand-building.</p>
+                        <span class="asp-card-link">Explore ↗</span>
+                    </a>
+
+                    <a href="https://www.saastreuropa.com" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Conference</div>
+                        <div class="asp-card-title">SaaStr Europa</div>
+                        <div class="asp-card-author">Barcelona — June 2026</div>
+                        <p class="asp-card-note">The B2B SaaS world's most concentrated gathering of GTM, growth, and marketing thinking. Relevant not because I'm targeting SaaS specifically, but because the most rigorous marketing frameworks are being built here — and they transfer.</p>
+                        <span class="asp-card-link">Explore ↗</span>
+                    </a>
+
+                    <a href="https://a16z.com" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Publication</div>
+                        <div class="asp-card-title">Andreessen Horowitz (a16z)</div>
+                        <div class="asp-card-author">Reading list</div>
+                        <p class="asp-card-note">The a16z canon on brand, go-to-market, and the 'why now' of deep tech is compulsory reading. Particularly their series on physical AI, climate tech positioning, and the challenge of marketing to enterprise buyers.</p>
+                        <span class="asp-card-link">Explore ↗</span>
+                    </a>
+
+                    <a href="https://www.lennysnewsletter.com" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Newsletter</div>
+                        <div class="asp-card-title">Lenny's Newsletter</div>
+                        <div class="asp-card-author">Lenny Rachitsky</div>
+                        <p class="asp-card-note">The most rigorous practitioner-level thinking on product, growth, and go-to-market for ambitious tech companies. I read every issue. The frameworks for thinking about retention, positioning, and channel fit directly shape how I build marketing strategies.</p>
+                        <span class="asp-card-link">Subscribe ↗</span>
+                    </a>
+
+                    <a href="https://in-cosmetics.com/global/" target="_blank" rel="noopener" class="asp-card">
+                        <div class="asp-card-type">Event · Active</div>
+                        <div class="asp-card-title">In-Cosmetics Global 2026</div>
+                        <div class="asp-card-author">Paris — April 14–16, 2026</div>
+                        <p class="asp-card-note">Currently preparing Escentina's debut stand at the world's leading B2B beauty ingredients show. Managing the full communication campaign — invite, booth concept, press, and post-event content. First major international trade show as lead.</p>
+                        <span class="asp-card-link">See event ↗</span>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-inner reveal-up">
+                <div class="contact-text">
+                    <span class="section-tag">Contact</span>
+                    <h2>Let's build something <em>that matters.</em></h2>
+                    <p>Based in Zurich. Open to full-time roles and selective consulting engagements. Not afraid of ambitious timelines or ambiguous briefs — that's where I do my best work.</p>
+                    <div class="contact-links">
+                        <a href="mailto:camille.robuchon@outlook.com" class="contact-link">
+                            <span class="contact-icon">✉</span>camille.robuchon@outlook.com
+                        </a>
+                        <a href="tel:+41789770107" class="contact-link">
+                            <span class="contact-icon">✆</span>+41 78 977 01 07
+                        </a>
+                        <div class="contact-permit">
+                            <span class="contact-icon">✓</span>C-Permit · Switzerland
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <a href="mailto:camille.robuchon@outlook.com?subject=Let's Connect" class="btn-primary btn-large magnetic">Send a Message</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-inner">
+            <span class="footer-logo">CR<span class="dot">.</span></span>
+            <span class="footer-copy">© 2026 Camille Robuchon · Zurich, Switzerland</span>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modal -->
+    <div class="pf-modal" id="pf-modal" aria-hidden="true" role="dialog">
+        <div class="modal-backdrop" id="modal-backdrop"></div>
+        <div class="modal-inner">
+            <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+            <div class="modal-content">
+                <div class="modal-img-wrap">
+                    <img src="" alt="" id="modal-img">
+                </div>
+                <div class="modal-body">
+                    <div class="modal-tag" id="modal-tag"></div>
+                    <h3 class="modal-title" id="modal-title"></h3>
+                    <p class="modal-desc" id="modal-desc"></p>
+                    <div class="modal-meta">
+                        <span class="modal-company">Escentina · Fragrance House</span>
+                        <span class="modal-location">Winterthur, Switzerland</span>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-nav">
+                <button class="modal-prev" id="modal-prev">← Prev</button>
+                <button class="modal-next" id="modal-next">Next →</button>
+            </div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
