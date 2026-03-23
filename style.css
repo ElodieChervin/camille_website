@@ -62,6 +62,7 @@ ul { list-style: none; }
     transition: width 0.25s var(--ease), height 0.25s var(--ease),
                 border-color 0.25s, background 0.25s, opacity 0.2s;
     mix-blend-mode: multiply;
+    will-change: left, top;
 }
 .cursor-dot {
     width: 5px;
@@ -73,7 +74,8 @@ ul { list-style: none; }
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: transform 0.08s;
+    transition: transform 0.04s;
+    will-change: left, top;
 }
 body.cursor-hover .cursor {
     width: 60px;
@@ -129,6 +131,12 @@ body.cursor-dark .cursor-dot {
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
     box-shadow: 0 1px 0 rgba(0,57,69,0.08);
 }
+/* White nav on hero (before scroll) */
+#navbar:not(.scrolled) .nav-logo { color: var(--beige); }
+#navbar:not(.scrolled) .nav-links a { color: var(--beige); }
+#navbar:not(.scrolled) .nav-links a::after { background: var(--beige); }
+#navbar:not(.scrolled) .nav-cta { background: var(--beige) !important; color: var(--dark) !important; }
+#navbar:not(.scrolled) .nav-cta:hover { background: var(--grey-green) !important; }
 .nav-inner {
     max-width: 1240px;
     margin: 0 auto;
@@ -213,9 +221,9 @@ body.cursor-dark .cursor-dot {
     inset: 0;
     background: linear-gradient(
         110deg,
-        rgba(0,57,69,0.88) 0%,
-        rgba(0,57,69,0.65) 50%,
-        rgba(0,57,69,0.18) 100%
+        rgba(0,57,69,0.95) 0%,
+        rgba(0,57,69,0.85) 50%,
+        rgba(0,57,69,0.55) 100%
     );
 }
 .hero-noise {
@@ -244,23 +252,39 @@ body.cursor-dark .cursor-dot {
 }
 #hero h1 {
     font-family: var(--font-serif);
-    font-size: clamp(3.2rem, 5vw, 5.2rem);
+    font-size: clamp(3.8rem, 6vw, 6.5rem);
     font-weight: 300;
-    line-height: 1.08;
+    line-height: 1.05;
     color: var(--beige);
-    margin-bottom: 1.75rem;
+    margin-bottom: 1rem;
     letter-spacing: -0.01em;
 }
 #hero h1 em {
     font-style: italic;
     color: var(--grey-green);
 }
+.hero-subtitle {
+    font-family: var(--font-sans);
+    font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--beige);
+    margin-bottom: 0.75rem;
+}
+.hero-keywords {
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--grey-green);
+    margin-bottom: 2rem;
+}
 .hero-sub {
-    font-size: 1rem;
+    font-size: 0.92rem;
     line-height: 1.75;
     color: rgba(230,221,212,0.72);
     margin-bottom: 2.5rem;
-    max-width: 500px;
+    max-width: 560px;
     font-weight: 300;
 }
 .hero-actions {
@@ -721,7 +745,7 @@ body.cursor-dark .cursor-dot {
 /* Education row */
 .edu-skills-row {
     display: grid;
-    grid-template-columns: 1fr 1fr 1.3fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.25rem;
 }
 .edu-card {

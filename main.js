@@ -45,8 +45,8 @@ if (cursor && cursorDot) {
 
     // Lag the ring cursor
     function animCursor() {
-        cx += (tx - cx) * 0.12;
-        cy += (ty - cy) * 0.12;
+        cx += (tx - cx) * 0.22;
+        cy += (ty - cy) * 0.22;
         cursor.style.left = cx + 'px';
         cursor.style.top = cy + 'px';
         requestAnimationFrame(animCursor);
