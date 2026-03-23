@@ -1230,6 +1230,30 @@ a.asp-card:hover .asp-card-link {
 }
 .contact-link:hover { color: var(--grey-green); }
 .contact-icon { color: var(--grey-green); width: 20px; text-align: center; flex-shrink: 0; }
+.btn-linkedin {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+    padding: 0.7rem 1.6rem;
+    background: #0a66c2;
+    color: #fff;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: var(--radius);
+    transition: background 0.25s, transform 0.15s;
+    cursor: none;
+}
+.btn-linkedin:hover { background: #004182; transform: translateY(-1px); }
+.linkedin-icon {
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.2);
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    line-height: 1;
+}
 .contact-cta .btn-primary { background: var(--grey-green); color: var(--dark); flex-shrink: 0; }
 .contact-cta .btn-primary:hover { background: var(--beige); }
 
