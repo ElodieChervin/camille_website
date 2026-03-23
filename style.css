@@ -1229,30 +1229,47 @@ a.asp-card:hover .asp-card-link {
     transition: color 0.2s;
 }
 .contact-link:hover { color: var(--grey-green); }
+.contact-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 240px;
+}
 .contact-icon { color: var(--grey-green); width: 20px; text-align: center; flex-shrink: 0; }
 .btn-linkedin {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.6rem;
-    margin-top: 0.5rem;
-    padding: 0.7rem 1.6rem;
-    background: #0a66c2;
-    color: #fff;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+    padding: 0.9rem 2rem;
+    background: var(--dark);
+    color: var(--beige);
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(230, 221, 212, 0.2);
     border-radius: var(--radius);
-    transition: background 0.25s, transform 0.15s;
+    transition: all 0.3s var(--ease);
     cursor: none;
+    width: 100%;
 }
-.btn-linkedin:hover { background: #004182; transform: translateY(-1px); }
+.btn-linkedin:hover { 
+    background: var(--grey-green); 
+    color: var(--dark);
+    border-color: var(--grey-green);
+    transform: translateY(-2px); 
+}
 .linkedin-icon {
     font-weight: 700;
-    font-size: 0.9rem;
-    background: rgba(255,255,255,0.2);
-    padding: 0.15rem 0.4rem;
-    border-radius: 3px;
+    font-size: 1rem;
+    background: rgba(230, 221, 212, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
     line-height: 1;
+}
+.btn-linkedin:hover .linkedin-icon {
+    background: rgba(0, 57, 69, 0.1);
 }
 .contact-cta .btn-primary { background: var(--grey-green); color: var(--dark); flex-shrink: 0; }
 .contact-cta .btn-primary:hover { background: var(--beige); }
