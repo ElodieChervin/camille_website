@@ -1524,3 +1524,110 @@ footer {
     .asp-card-note { font-size: 0.82rem; }
     .asp-tab { font-size: 0.72rem; padding: 0.35rem 0; }
 }
+
+/* ============================================
+   PROJECTS SLIDER
+   ============================================ */
+#projects {
+    padding: 7rem 0;
+    background: var(--beige-2);
+}
+.projects-slider {
+    position: relative;
+    max-width: 900px;
+    margin: 4rem auto 0;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+    padding: 3rem 4rem;
+    overflow: hidden;
+}
+.projects-track {
+    position: relative;
+    min-height: 200px;
+}
+.project-slide {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(30px);
+    transition: all 0.5s var(--ease);
+}
+.project-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    position: relative;
+}
+.ps-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+.ps-img {
+    flex: 0 0 45%;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 300px;
+}
+.ps-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ps-content {
+    flex: 1;
+}
+.ps-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+.ps-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--mid-grey);
+}
+.slider-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+}
+.slider-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--grey-green);
+    cursor: pointer;
+    transition: color 0.3s;
+    padding: 0.5rem;
+}
+.slider-btn:hover { color: var(--dark); }
+.slider-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+.dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(0,57,69,0.15);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+.dot.active {
+    background: var(--dark);
+    transform: scale(1.3);
+}
+@media (max-width: 768px) {
+    .projects-slider { padding: 2rem; }
+    .ps-content h3 { font-size: 1.4rem; }
+    .ps-content p { font-size: 0.95rem; }
+    .ps-layout { flex-direction: column; gap: 1.5rem; }
+    .ps-img { height: 200px; width: 100%; }
+}

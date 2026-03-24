@@ -277,45 +277,28 @@ modal.addEventListener('touchend', e => {
 });
 
 // ============================================
-//   ASPIRATIONS: Tab switching
+//   PROJECTS SLIDER
 // ============================================
-const aspTabs = document.querySelectorAll('.asp-tab');
-const aspPanels = document.querySelectorAll('.asp-panel');
+const slides = document.querySelectorAll('.project-slide');
+const dots = document.querySelectorAll('.dot');
+const btnPrev = document.getElementById('slider-prev');
+const btnNext = document.getElementById('slider-next');
+let projIndex = 0;
 
-aspTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const targetId = 'tab-' + tab.getAttribute('data-tab');
+function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    projIndex = index;
+    slides.forEach(s => s.classList.remove('active'));
+    dots.forEach(d => d.classList.remove('active'));
+    if (slides[projIndex]) slides[projIndex].classList.add('active');
+    if (dots[projIndex]) dots[projIndex].classList.add('active');
+}
 
-        // Deactivate current
-        aspTabs.forEach(t => t.classList.remove('active'));
-        aspPanels.forEach(p => {
-            if (p.classList.contains('active')) {
-                p.style.opacity = '0';
-                p.style.transform = 'translateY(10px)';
-                setTimeout(() => {
-                    p.classList.remove('active');
-                    p.style.opacity = '';
-                    p.style.transform = '';
-                }, 200);
-            }
-        });
-
-        // Activate new after brief delay
-        tab.classList.add('active');
-        setTimeout(() => {
-            const panel = document.getElementById(targetId);
-            if (panel) {
-                panel.classList.add('active');
-                panel.style.opacity = '0';
-                panel.style.transform = 'translateY(10px)';
-                panel.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-                requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        panel.style.opacity = '1';
-                        panel.style.transform = 'translateY(0)';
-                    });
-                });
-            }
-        }, 220);
+if (btnPrev && btnNext) {
+    btnPrev.addEventListener('click', () => showSlide(projIndex - 1));
+    btnNext.addEventListener('click', () => showSlide(projIndex + 1));
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => showSlide(parseInt(dot.getAttribute('data-index'))));
     });
-});
+}

@@ -28,19 +28,16 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#aspirations">Aspirations</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact" class="nav-cta magnetic">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero -->
-    <section id="hero">
-        <div class="hero-background" id="hero-bg">
-            <img src="images/escentina-magazine-feature.jpeg" alt="" class="hero-bg-img" id="parallax-img">
-            <div class="hero-overlay"></div>
-            <div class="hero-noise"></div>
-        </div>
+    <section id="hero" class="hero-section" style="background-image: url('images/abstract-hero-bg.png');">
+        <div class="hero-overlay"></div>
+        <div class="hero-noise"></div>
         <div class="hero-content">
             <h1 class="reveal-up">
                 Camille<br>Robuchon
@@ -189,15 +186,9 @@
                 </div>
                 <div class="edu-card glass-card reveal-up">
                     <div class="edu-icon">◈</div>
-                    <div class="edu-degree">The Fundamentals of Digital Marketing</div>
-                    <div class="edu-school">Google Digital Garage</div>
-                    <div class="edu-detail">Certification</div>
-                </div>
-                <div class="edu-card glass-card reveal-up">
-                    <div class="edu-icon">◈</div>
-                    <div class="edu-degree">Online Marketing Foundations</div>
-                    <div class="edu-school">LinkedIn Learning</div>
-                    <div class="edu-detail">Certification</div>
+                    <div class="edu-degree">Digital Marketing Certifications</div>
+                    <div class="edu-school">Google Digital Garage &amp; LinkedIn Learning</div>
+                    <div class="edu-detail">Foundations</div>
                 </div>
                 <div class="skills-card glass-card reveal-up">
                     <div class="skills-group">
@@ -215,6 +206,105 @@
                             <span>German 🇩🇪</span><span>Spanish 🇪🇸</span>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Slideshow -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header reveal-up">
+                <h2>Projects</h2>
+            </div>
+
+            <div class="projects-slider reveal-up">
+                <div class="projects-track" id="projects-track">
+                    <!-- Slide 1 -->
+                    <div class="project-slide active">
+                        <div class="ps-layout">
+                            <div class="ps-img">
+                                <img src="images/escentina-team-workshop.jpeg" alt="Workshop">
+                            </div>
+                            <div class="ps-content">
+                                <h3>Building a Department from Scratch</h3>
+                                <p>I set up the marketing function at a new company from zero. I registered our trademark in over 40 countries, created our brand identity, and built our website and social media presence, all on a very tight budget.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="project-slide">
+                        <div class="ps-layout">
+                            <div class="ps-img">
+                                <img src="images/abstract-data-ux.png" alt="UX Data">
+                            </div>
+                            <div class="ps-content">
+                                <h3>Improving Website User Experience</h3>
+                                <p>I used AI tools to look at how people click through our website. By understanding where they got stuck, I changed the design. This resulted in more people asking for product demonstrations.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="project-slide">
+                        <div class="ps-layout">
+                            <div class="ps-img">
+                                <img src="images/escentina-scent-question.jpeg" alt="Sentiment Analysis">
+                            </div>
+                            <div class="ps-content">
+                                <h3>Automating Customer Feedback</h3>
+                                <p>I built an automated system that reads through hundreds of customer feedback emails and reviews. It highlights the most common complaints, which helps our product team know exactly what to fix first.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="project-slide">
+                        <div class="ps-layout">
+                            <div class="ps-img">
+                                <img src="images/escentina-lemon-juniper-set.jpeg" alt="Product Launch">
+                            </div>
+                            <div class="ps-content">
+                                <h3>Launching Global Products</h3>
+                                <p>I launched a new premium fragrance line in partnership with a famous pastry chef. I created the materials that our sales teams around the world used to pitch the product to local stores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="project-slide">
+                        <div class="ps-layout">
+                            <div class="ps-img">
+                                <img src="images/escentina-truescent-brochure.jpeg" alt="Global Marketing">
+                            </div>
+                            <div class="ps-content">
+                                <h3>Managing International Campaigns</h3>
+                                <p>I managed the creation of all the photos, videos, and texts for two major product launches. I made sure these materials worked well and made sense in both the US and Chinese markets.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="project-slide">
+                        <div class="ps-layout">
+                            <div class="ps-img">
+                                <img src="images/escentina-lab-research.jpeg" alt="Science Translation">
+                            </div>
+                            <div class="ps-content">
+                                <h3>Making Science Easy to Understand</h3>
+                                <p>I bridged the gap between the scientists making the products and the salespeople selling them. I took complex chemical formulas and turned them into easy-to-understand stories.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="slider-prev" aria-label="Previous Project">←</button>
+                    <div class="slider-dots" id="slider-dots">
+                        <button class="dot active" data-index="0" aria-label="Go to slide 1"></button>
+                        <button class="dot" data-index="1" aria-label="Go to slide 2"></button>
+                        <button class="dot" data-index="2" aria-label="Go to slide 3"></button>
+                        <button class="dot" data-index="3" aria-label="Go to slide 4"></button>
+                        <button class="dot" data-index="4" aria-label="Go to slide 5"></button>
+                        <button class="dot" data-index="5" aria-label="Go to slide 6"></button>
+                    </div>
+                    <button class="slider-btn next" id="slider-next" aria-label="Next Project">→</button>
                 </div>
             </div>
         </div>
@@ -430,196 +520,7 @@
 
             </div><!-- /portfolio-grid -->
 
-            <!-- How it started -->
-            <div class="case-study-banner reveal-up">
-                <div class="csb-left">
-                    <div class="csb-images">
-                        <img src="images/escentina-team-workshop.jpeg" alt="Team workshop">
-                        <img src="images/escentina-lab-research.jpeg" alt="Lab research">
-                    </div>
-                </div>
-                <div class="csb-right">
-                    <div class="csb-label">How It Started</div>
-                    <h3>Building a Marketing Function from Zero</h3>
-                    <p>When I joined Escentina, there was no brand identity, no protected company name, and no marketing function. Over 3 years I built all of it: trademark registration in 40+ countries, new brand identity, B2B digital ecosystem, social presence from zero, within a CHF 100K budget. Today the brand is internationally recognised, published in specialist media, and driving business development across 5+ markets.</p>
-                    <div class="csb-metrics">
-                        <div class="csb-metric">
-                            <div class="csb-num">CHF 100K</div>
-                            <div class="csb-label-s">Total Budget</div>
-                        </div>
-                        <div class="csb-metric">
-                            <div class="csb-num">5+</div>
-                            <div class="csb-label-s">Markets Launched</div>
-                        </div>
-                        <div class="csb-metric">
-                            <div class="csb-num">0→1</div>
-                            <div class="csb-label-s">Brand Function Built</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-        </div>
-    </section>
-
-    <!-- Aspirations -->
-    <section id="aspirations">
-        <div class="asp-bg">
-            <img src="images/escentina-lab-technician.jpeg" alt="" class="asp-bg-img">
-            <div class="asp-overlay"></div>
-        </div>
-        <div class="container">
-
-            <div class="asp-header reveal-up">
-                <span class="section-tag" style="color:var(--grey-green)">Aspirations</span>
-                <h2 style="color:var(--beige)">What I'm <em>building toward</em></h2>
-                <p class="asp-intro">The marketing work I find most interesting sits where technology meets the physical world. Complex science that needs to become a brand people trust, follow, and buy into. That's the kind of problem I want to keep solving.</p>
-            </div>
-
-            <!-- Tab navigation -->
-            <div class="asp-tabs reveal-up">
-                <button class="asp-tab active" data-tab="reading">Reading</button>
-                <button class="asp-tab" data-tab="thinking">Thinking About</button>
-                <button class="asp-tab" data-tab="following">Following</button>
-            </div>
-
-            <!-- Tab: Reading -->
-            <div class="asp-panel active" id="tab-reading">
-                <div class="asp-grid">
-
-                    <a href="https://www.aprildunford.com/obviously-awesome" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Book</div>
-                        <div class="asp-card-title">Obviously Awesome</div>
-                        <div class="asp-card-author">April Dunford</div>
-                        <p class="asp-card-note">The best playbook I've read on positioning technology products. Changed how I think about framing: it's not about what you make, it's about the category you create.</p>
-                        <span class="asp-card-link">Read more ↗</span>
-                    </a>
-
-                    <a href="https://www.playbigger.com" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Book</div>
-                        <div class="asp-card-title">Play Bigger</div>
-                        <div class="asp-card-author">Lochhead, Peterson, Ramadan, Maney</div>
-                        <p class="asp-card-note">Category design as a marketing discipline. The argument: the best companies don't compete in categories, they create them. Relevant to anyone building something genuinely new.</p>
-                        <span class="asp-card-link">Read more ↗</span>
-                    </a>
-
-                    <a href="https://www.marketingaiinstitute.com/blog/marketing-artificial-intelligence-book" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Book</div>
-                        <div class="asp-card-title">Marketing Artificial Intelligence</div>
-                        <div class="asp-card-author">Paul Roetzer &amp; Mike Kaput</div>
-                        <p class="asp-card-note">Practical framework on how AI is reshaping marketing operations: content, personalization, analytics. Not hype, just a useful map of where things are actually going.</p>
-                        <span class="asp-card-link">Read more ↗</span>
-                    </a>
-
-                    <a href="https://www.goodreads.com/book/show/26210508-alchemy" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Book</div>
-                        <div class="asp-card-title">Alchemy</div>
-                        <div class="asp-card-author">Rory Sutherland</div>
-                        <p class="asp-card-note">Why logic alone never sells anything, and why the irrational is often the most powerful lever. Really useful when you're trying to translate something technical into something people actually want.</p>
-                        <span class="asp-card-link">Read more ↗</span>
-                    </a>
-
-                    <a href="https://press.princeton.edu/books/hardcover/9780691182292/narrative-economics" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Book</div>
-                        <div class="asp-card-title">Narrative Economics</div>
-                        <div class="asp-card-author">Robert Shiller</div>
-                        <p class="asp-card-note">Stories are how ideas (and markets) spread. Shiller's framework for how narratives drive economic behaviour is surprisingly useful for thinking about brand-building.</p>
-                        <span class="asp-card-link">Read more ↗</span>
-                    </a>
-
-                    <a href="https://www.chip-heath.com/the-power-of-moments" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Book</div>
-                        <div class="asp-card-title">The Power of Moments</div>
-                        <div class="asp-card-author">Chip &amp; Dan Heath</div>
-                        <p class="asp-card-note">Brand experiences are built from peaks, not averages. This changed how I think about events, onboarding, and any moment where a company gets to make a first impression.</p>
-                        <span class="asp-card-link">Read more ↗</span>
-                    </a>
-
-                </div>
-            </div>
-
-            <!-- Tab: Thinking About -->
-            <div class="asp-panel" id="tab-thinking">
-                <div class="asp-grid">
-
-                    <div class="asp-card asp-card-dark">
-                        <div class="asp-card-type">Interest</div>
-                        <div class="asp-card-title">AI-Driven Content &amp; Workflow</div>
-                        <p class="asp-card-note">Exploring how AI tools (Midjourney, Adobe Firefly, CapCut AI) can multiply a small team's output. Currently integrating prompt engineering and automated content pipelines into my daily workflow at Escentina.</p>
-                    </div>
-
-                    <div class="asp-card asp-card-dark">
-                        <div class="asp-card-type">Interest</div>
-                        <div class="asp-card-title">Brand Building for Technical Products</div>
-                        <p class="asp-card-note">How to position complex, science-based products so they resonate beyond expert audiences. My experience at Escentina (natural fragrance chemistry) taught me how to make technical depth feel accessible and compelling.</p>
-                    </div>
-
-                    <div class="asp-card asp-card-dark">
-                        <div class="asp-card-type">Interest</div>
-                        <div class="asp-card-title">B2B Content That Drives Enquiries</div>
-                        <p class="asp-card-note">Creating content that goes beyond impressions: the kind of thought leadership that generates inbound interest. At Escentina, our allergen infographic and ingredient series became our strongest lead generation tools.</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Tab: Following -->
-            <div class="asp-panel" id="tab-following">
-                <div class="asp-grid">
-
-                    <a href="https://www.maicon.ai" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Conference</div>
-                        <div class="asp-card-title">Marketing AI Conference (MAICON)</div>
-                        <div class="asp-card-author">Cleveland, OH · July 2026</div>
-                        <p class="asp-card-note">Where practitioners (not theorists) share what's actually working in AI-driven content, campaign ops, and brand strategy. On my radar for 2026.</p>
-                        <span class="asp-card-link">Explore ↗</span>
-                    </a>
-
-                    <a href="https://websummit.com" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Conference</div>
-                        <div class="asp-card-title">Web Summit</div>
-                        <div class="asp-card-author">Lisbon · November 2026</div>
-                        <p class="asp-card-note">Europe's largest tech conference. I go to watch how ambitious startups position themselves to press, investors, and customers at the same time, in 3 days. A case study in compressed brand-building.</p>
-                        <span class="asp-card-link">Explore ↗</span>
-                    </a>
-
-                    <a href="https://www.saastreuropa.com" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Conference</div>
-                        <div class="asp-card-title">SaaStr Europa</div>
-                        <div class="asp-card-author">Barcelona · June 2026</div>
-                        <p class="asp-card-note">The B2B SaaS world's most concentrated gathering of GTM, growth, and marketing thinking. I follow this not for SaaS specifically, but because the most rigorous marketing frameworks are being built here, and they transfer.</p>
-                        <span class="asp-card-link">Explore ↗</span>
-                    </a>
-
-                    <a href="https://a16z.com" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Publication</div>
-                        <div class="asp-card-title">Andreessen Horowitz (a16z)</div>
-                        <div class="asp-card-author">Reading list</div>
-                        <p class="asp-card-note">Their writing on brand, go-to-market, and the 'why now' of deep tech is consistently good. Especially the series on climate tech positioning and marketing to enterprise buyers.</p>
-                        <span class="asp-card-link">Explore ↗</span>
-                    </a>
-
-                    <a href="https://www.lennysnewsletter.com" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Newsletter</div>
-                        <div class="asp-card-title">Lenny's Newsletter</div>
-                        <div class="asp-card-author">Lenny Rachitsky</div>
-                        <p class="asp-card-note">Practitioner-level thinking on product, growth, and go-to-market. I read every issue. The frameworks on retention, positioning, and channel fit have genuinely shaped how I plan campaigns.</p>
-                        <span class="asp-card-link">Subscribe ↗</span>
-                    </a>
-
-                    <a href="https://in-cosmetics.com/global/" target="_blank" rel="noopener" class="asp-card">
-                        <div class="asp-card-type">Event · Active</div>
-                        <div class="asp-card-title">In-Cosmetics Global 2026</div>
-                        <div class="asp-card-author">Paris · April 14–16, 2026</div>
-                        <p class="asp-card-note">Currently preparing Escentina's debut stand at the world's leading B2B beauty ingredients show. Handling the full communication campaign: invite, booth concept, press, post-event content. First major international trade show as lead.</p>
-                        <span class="asp-card-link">See event ↗</span>
-                    </a>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
 
     <!-- Contact -->
     <section id="contact">
